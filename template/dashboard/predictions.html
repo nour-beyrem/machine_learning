@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+{% block title %}All Prediction{% endblock %}
+
+{% block content  %}
+<div class="bg-light" id="auto" style="background-image:url('https://img-3.journaldesfemmes.fr/vxvS0LV6m9NEffsNWpVqXTsRHe4=/1500x/smart/5aa6431824984b09b05d34e6d310bc16/ccmcms-jdf/11468788.jpg'); height: 100vh; background-size: cover;
+background-repeat: no-repeat; ">
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">radius_mean</th>
+                    <th scope="col">texture_mean</th>
+                  
+                    <th scope="col">Prediction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for data in predicted_instance %}
+                  <tr>
+                    <th scope="row">{{ data.radius_mean }}</th>
+                    <td>{{ data.texture_mean }}</td>
+                    <td>{{ data.predictions }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
