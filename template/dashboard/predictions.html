@@ -12,7 +12,9 @@ background-repeat: no-repeat; ">
                   <tr>
                     <th scope="col">radius_mean</th>
                     <th scope="col">texture_mean</th>
-                  
+                    <th scope="col">perimeter_mean</th>
+                    <th scope="col">area_mean</th>
+                    <th scope="col">smoothness_mean</th>
                     <th scope="col">Prediction</th>
                   </tr>
                 </thead>
@@ -21,6 +23,9 @@ background-repeat: no-repeat; ">
                   <tr>
                     <th scope="row">{{ data.radius_mean }}</th>
                     <td>{{ data.texture_mean }}</td>
+                    <td>{{ data.perimeter_mean }}</td>
+                    <td>{{ data.area_mean }}</td>
+                    <td>{{ data.smoothness_mean }}</td>
                     <td>{{ data.predictions }}</td>
                   </tr>
                   {% endfor %}
